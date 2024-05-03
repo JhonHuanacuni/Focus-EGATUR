@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'rest_framework'
+    'rest_framework',
     'congreso',
 ]
 
@@ -126,7 +126,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#cors autoritation 
+#cors authorization
 CORS_ALLOWED_ORIGINS = [
 
 ]
