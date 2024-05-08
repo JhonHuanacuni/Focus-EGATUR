@@ -52,12 +52,13 @@ export function TaskFormPage() {
   }, []);
 
   return (
-    <div>
+    <div className=" max-w-xl mx-auto">
       <form onSubmit={onsubmit}>
         <input
           type="text"
           placeholder="title"
           {...register("title", { required: true })}
+          className=" bg-zinc-700 p-3 rounded-lg block w-full mb-3"
         />
 
         {errors.title && <span>Este campo es requerido</span>}
@@ -66,14 +67,18 @@ export function TaskFormPage() {
           rows="3"
           placeholder="Descripcion"
           {...register("descripcion", { required: true })}
+          className=" bg-zinc-700 p-3 rounded-lg block w-full mb-3"
         ></textarea>
 
         {errors.descripcion && <span>Este campo es requerido</span>}
-        <button>Save</button>
+        <button className=" bg-indigo-500 p-3 rounded-lg block w-full mt-3">
+          Save
+        </button>
       </form>
 
       {params.id && (
-        <button
+        <div className=" flex justify-end">
+          <button className=" bg-red-500 p-3 rounded-lg w-48 mt-3"
           onClick={async () => {
             const accepted = window.confirm("Estas seguro?");
             if (accepted) {
@@ -91,6 +96,7 @@ export function TaskFormPage() {
         >
           Delete
         </button>
+        </div>
       )}
     </div>
   );

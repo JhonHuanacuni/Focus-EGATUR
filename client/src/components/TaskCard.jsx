@@ -11,9 +11,8 @@ export function TaskCard({ task }) {
       }}
     >
       <div>
-        <h1>{task.title}</h1>
-        <h1>{task.descripcion}</h1>
-        <hr />
+        <h1 className="font-bold uppercase">{task.title}</h1>
+        <p className="text-slate-400">{task.descripcion}</p>
       </div>
     </div>
   );
