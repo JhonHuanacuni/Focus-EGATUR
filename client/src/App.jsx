@@ -22,7 +22,7 @@ function App() {
     </div>
   ) : (
     <BrowserRouter>
-      <div className="px-4 pt-4">
+      <div className="">   {/* px-4 pt-4 */}
         <Header />
         <Routes>
           <Route path="/" element={<Navigate to="/tasks" />} />
