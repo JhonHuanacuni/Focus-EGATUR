@@ -1,2 +1,4 @@
 #maquina virtual
 venv/
+
+db.sqlite3
