@@ -4,7 +4,6 @@ export function HomePage() {
   return (
     <>
       <HomeBody/>
-      
     </>
   );
 }

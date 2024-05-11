@@ -4,7 +4,7 @@ import { NavBar } from "./NavBar";
 export function Header() {
   return (
 <header className="flex place-content-between items-center px-4 py-4 fixed w-full shadow-md">
-        <img src={logo} alt="Logo" className="max-w-40  h-auto" />
+        <img src={logo} alt="Logo" className="max-w-40  h-auto sm:pl-4" />
         <NavBar/>
     </header>   
   )
