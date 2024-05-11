@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 
 export function Reloj() {
   const [time, setTime] = useState({
-    days: 20,
-    hours: 13,
-    minutes: 25,
-    seconds: 60,
+    Dias: 20,
+    Horas: 13,
+    Minutos: 25,
+    Segundos: 60,
   });
 
   useEffect(() => {
@@ -18,30 +18,30 @@ export function Reloj() {
 
   const updateTime = () => {
     setTime((prevTime) => {
-      let { days, hours, minutes, seconds } = prevTime;
+      let { Dias, Horas, Minutos, Segundos } = prevTime;
 
-      seconds -= 1;
+      Segundos -= 1;
 
-      if (seconds < 0) {
-        seconds = 59;
-        minutes -= 1;
+      if (Segundos < 0) {
+        Segundos = 59;
+        Minutos -= 1;
       }
 
-      if (minutes < 0) {
-        minutes = 59;
-        hours -= 1;
+      if (Minutos < 0) {
+        Minutos = 59;
+        Horas -= 1;
       }
 
-      if (hours < 0) {
-        hours = 23;
-        days -= 1;
+      if (Horas < 0) {
+        Horas = 23;
+        Dias -= 1;
       }
 
       return {
-        days,
-        hours,
-        minutes,
-        seconds,
+        Dias,
+        Horas,
+        Minutos,
+        Segundos,
       };
     });
   };

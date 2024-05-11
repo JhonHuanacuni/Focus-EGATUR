@@ -6,7 +6,7 @@ import React from "react";
 export function BodyMain() {
   return (
     <>
-      <h1 className=" text-black text-center px-4 py-2 sm:text-7xl text-6xl rubik-moonrocks-regular pt-60">
+      <h1 className=" text-black text-center px-4 py-2 sm:text-7xl text-6xl rubik-moonrocks-regular xl:pt-60 pt-40 ">
       CONGRESO EGATUR
     </h1>
     <h2 className=" font-bold mb-4 font-serif sm:text-6xl text-4xl rubik-mono-one-regular">
