@@ -48,7 +48,7 @@ export function Reloj() {
 
   return (
     <div
-      className="flex w-[320px] select-none justify-center gap-y-4 uppercase text-primary md:gap-x-6 md:gap-y-4 bg-white md:w-[450px]  h-[100px] rounded-full mt-4 "
+      className="z-10 flex w-[320px] select-none justify-center gap-y-4 uppercase text-primary md:gap-x-6 md:gap-y-4 bg-white md:w-[450px]  h-[100px] rounded-full mt-4 "
       role="timer"
     >
       {Object.entries(time).map(([unit, value]) => (

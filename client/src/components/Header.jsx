@@ -22,7 +22,7 @@ export function Header() {
 
   return (
     <header
-      className="flex place-content-between items-center px-4 py-4 fixed w-full shadow-md"
+      className="z-10  flex place-content-between items-center px-4 py-4 fixed w-full shadow-md"
       style={{
         backgroundColor: "rgba(255, 255, 255, 0.5)",
         backdropFilter: "blur(5px)",
