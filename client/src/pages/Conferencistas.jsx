@@ -10,7 +10,7 @@ import { PonentesBoard } from "../components/PonentesBoard";
 export function Conferencistas() {
   return (
     <div className="py-20 px-20">
-      <div className=" w-[500px] text-black text-center m-auto">
+      <div className="flex flex-col  text-black text-center m-auto">
         <h1 className="text-[30px] font-extrabold">NUESTROS PONENTES</h1>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum

@@ -3,7 +3,7 @@ import fondo_1 from "../assets/img/fondo_1.png";
 export function PonenteCard1(data) {
   return (
     <div
-      className=" h-[450px] w-[900px] flex mt-10 relative m-auto z-0"
+      className=" h-[450px] sm:w-[900px] w-[300px] flex mt-10 relative m-auto z-0"
       style={{ boxShadow: "0 0 15px rgba(0, 0, 0, 1)" }}
     >
       <div
@@ -16,7 +16,7 @@ export function PonenteCard1(data) {
           src={fondo_1}
           style={{ filter: "brightness(70%)" }}
         />
-        <div className=" w-[400px] max-h-[450px] absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
+        <div className=" flex flex-col sm:w-[400px] max-h-[450px] absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
           <h4 className="text-red-400 text-[25px] font-bold tracking-tight leading-none ">
             {data.nombre}
           </h4>
