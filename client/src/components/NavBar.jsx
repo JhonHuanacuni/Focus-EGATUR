@@ -1,14 +1,16 @@
 import buttonMenu from "../assets/img/menu.jpg";
+import { Conferencistas } from "../pages/Conferencistas";
+import { Link } from 'react-router-dom'; 
 
 export function NavBar() {
   return (
     <>
       <ul className="text-black hidden sm:flex text-[18px] sm:w-[430px] sm:place-content-around sm:text-[16px] sm:items-center">
         <li>
-          <a href="#" className=" hover:text-red-500 font-bold">Inicio</a>
+        <Link to="/home" className="hover:text-red-500 font-bold">Inicio</Link>
         </li>
         <li>
-          <a href="#" className=" hover:text-red-500 font-bold">Conferencistas</a>
+          <Link to="/conferencistas" className="hover:text-red-500 font-bold">Conferencistas</Link>
         </li>
         <li>
           <a href="#" className=" hover:text-red-500 font-bold">Nosotros</a>

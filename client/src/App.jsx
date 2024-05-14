@@ -3,6 +3,7 @@ import { TasksPage } from "./pages/TasksPage";
 import { TaskFormPage } from "./pages/TaskFormPage";
 import { Navigation } from "./components/Navigation";
 import { HomePage } from "./pages/HomePage";
+import { Conferencistas } from "./pages/Conferencistas";
 import { Header } from "./components/Header";
 import { Toaster } from "react-hot-toast";
 import { useState, useEffect } from "react";
@@ -15,7 +16,7 @@ function App() {
     setLoading(true); // Establece loading en true inicialmente
     setTimeout(() => {
       setLoading(false); // Cambia loading a false después de 5000 milisegundos
-    }, 2000);
+    }, 1000);
   }, []);
   return loading ? (
     <div className="h-screen flex flex-col justify-center items-center">
@@ -28,6 +29,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/tasks" />} />
           <Route path="/home" element={<HomePage />} />
+          <Route path="/conferencistas" element={<Conferencistas />} />
           <Route path="/tasks" element={<TasksPage />} />
           <Route path="/tasks-create" element={<TaskFormPage />} />
           <Route path="/tasks/:id" element={<TaskFormPage />} />

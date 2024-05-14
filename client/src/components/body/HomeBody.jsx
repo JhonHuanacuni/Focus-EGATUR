@@ -4,7 +4,13 @@ import { BodyMain } from "./BodyMain";
 import { PonentesCard } from "../ponentes/PonentesCard";
 import AniEgatur from "../../assets/img/AniEgatur.svg";
 
-const nombre = "PonentePrueba";
+import chef1 from "../../assets/img/ChefIco.jpg";
+
+const nombreChef1 = " Chef X";
+const especialidadChef1 = "Gastronomia";
+
+const nombreChef2 = " Chef Y";
+const especialidadChef2 = "Barismo";
 
 export function HomeBody() {
   return (
@@ -45,24 +51,44 @@ export function HomeBody() {
           }
         `}</style>
       </div>
-      
 
       <section className=" flex justify-center items-center flex-col">
         <div className="flex py-5 text-black">
           <p className=" font-bold text-xl">Ponentes</p>
         </div>
-        <div className="flex justify-center items-center flex-col w-3/4">
-          <section className="flex flex-row  ">
-            <PonentesCard nombre={nombre} />
-            <PonentesCard nombre={nombre} />
+        <div
+          className="flex justify-center flex-col w-3/4 overflow-x-auto"
+          style={{ scrollbarWidth: "thin", scrollbarColor: "#0001 #f1f1f1" }}
+        >
+          <section className="flex flex-row">
+            <PonentesCard
+              nombre={nombreChef1}
+              especialidad={especialidadChef1}
+              imagen={chef1}
+            />
+            <PonentesCard
+              nombre={nombreChef2}
+              especialidad={especialidadChef2}
+              imagen={chef1}
+            />
+            <PonentesCard
+              nombre={nombreChef2}
+              especialidad={especialidadChef2}
+              imagen={chef1}
+            />
+            <PonentesCard
+              nombre={nombreChef2}
+              especialidad={especialidadChef2}
+              imagen={chef1}
+            />
           </section>
-          <div>
-            <p className=" text-black mt-20 mb-5">
-              Lorem ipsum es el texto que se usa habitualmente en diseño gráfico
-              en demostraciones de tipografías o de borradores de diseño para
-              probar el diseño visual antes de insertar el texto final.
-            </p>
-          </div>
+        </div>
+        <div>
+          <p className=" text-black mt-20 mb-5 text-center">
+            Lorem ipsum es el texto que se usa habitualmente en diseño gráfico
+            en demostraciones de tipografías o de borradores de diseño para
+            probar el diseño visual antes de insertar el texto final.
+          </p>
         </div>
       </section>
     </>

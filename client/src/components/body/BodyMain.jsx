@@ -5,8 +5,8 @@ import React from "react";
 
 export function BodyMain() {
   return (
-    <div className="z-10 flex items-center flex-col">
-      <h1 className=" text-black text-center px-4 py-2 sm:text-7xl text-6xl rubik-moonrocks-regular xl:pt-50 sm:pt-32 pt-40 ">
+    <div className="  z-10 flex items-center flex-col">
+      <h1 className=" text-black  text-center px-4 py-2 sm:text-7xl text-6xl rubik-moonrocks-regular xl:pt-50 sm:pt-32 pt-40 ">
         CONGRESO EGATUR
       </h1>
       <h2 className=" font-bold mb-4 font-serif sm:text-6xl text-4xl rubik-mono-one-regular">
