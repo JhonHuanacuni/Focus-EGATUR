@@ -1,9 +1,3 @@
-import ponente_1 from "../assets/img/ponente_1.png";
-import ponente_2 from "../assets/img/ponente_2.png";
-import chef_1 from "../assets/img/chef_real_1.png";
-import chef_2 from "../assets/img/chef_real_2.png";
-import chef_3 from "../assets/img/chef_real_3.png";
-import fondo_1 from "../assets/img/fondo_1.png";
 
 import { PonentesBoard } from "../components/PonentesBoard";
 

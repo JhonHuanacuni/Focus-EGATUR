@@ -7,7 +7,7 @@ import chef_3 from "../assets/img/chef_real_3.png";
 import { PonenteCard1 } from "./PonenteCard1";
 import { PonenteCard2 } from "./PonenteCard2";
 
-export function PonentesBoard({ fondo }) {
+export function PonentesBoard() {
   return (
     <div className="">
       <PonenteCard1
