@@ -1,5 +1,4 @@
 import buttonMenu from "../assets/img/menu.jpg";
-import { Conferencistas } from "../pages/Conferencistas";
 import { Link } from 'react-router-dom'; 
 
 export function NavBar() {

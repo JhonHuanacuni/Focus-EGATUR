@@ -60,7 +60,7 @@ export function HomeBody() {
           className="flex justify-center flex-col w-3/4 overflow-x-auto"
           style={{ scrollbarWidth: "thin", scrollbarColor: "#0001 #f1f1f1" }}
         >
-          <section className="flex flex-row">
+          <section className=" p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-10 justify-items-center">
             <PonentesCard
               nombre={nombreChef1}
               especialidad={especialidadChef1}
