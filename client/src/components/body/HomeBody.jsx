@@ -15,10 +15,10 @@ const especialidadChef2 = "Barismo";
 export function HomeBody() {
   return (
     <>
-      <div className="relative flex items-center justify-center h-screen">
-        {/* Fondo con imagen giratoria */}
-        <div className="absolute z-0 inset-0 flex items-center justify-center bg-gradient-to-r from-red-600 via-red-400 to-pink-300 overflow-hidden">
-          <div className=" h-[1000px] w-[1000px] absolute  flex items-center justify-center">
+      <div className="relative z-0 inset-0 flex overflow-hidden h-screen justify-center">
+        <div className="absolute z-0 inset-0 flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-red-600 via-red-400 to-pink-300 animate-gradient"></div>
+          <div className="absolute h-[1000px] w-[1000px] flex items-center justify-center">
             <img
               src={AniEgatur}
               alt=""
@@ -28,7 +28,7 @@ export function HomeBody() {
         </div>
 
         {/* Contenido principal */}
-        <section className="flex flex-col items-center justify-center w-4/5 mx-4 relative z-10">
+        <section className="flex flex-col items-center justify-center  mx-4 relative z-10">
           <BodyMain />
           <div className="h-1/5 flex items-end">
             <Reloj />
@@ -49,6 +49,32 @@ export function HomeBody() {
           .animate-spin-slow {
             animation: spin 100s linear infinite;
           }
+          @keyframes slide {
+            0% {
+              background-position: 0% 0%;
+            }
+            25% {
+              background-position: 100% 0%;
+            }
+            50% {
+              background-position: 100% 100%;
+            }
+            75% {
+              background-position: 0% 100%;
+            }
+            100% {
+              background-position: 0% 0%;
+            }
+          }
+          
+          .animate-gradient {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(-45deg, #ed4046, #f9c4c6, #ed4046, #f9c4c6, #ed4046);
+            background-size: 800% 800%;
+            animation: slide 30s linear infinite;
+          }
+          
         `}</style>
       </div>
 
