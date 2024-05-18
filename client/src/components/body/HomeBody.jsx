@@ -3,6 +3,7 @@ import { Reloj } from "./Reloj";
 import { BodyMain } from "./BodyMain";
 import { PonentesCard } from "../ponentes/PonentesCard";
 import AniEgatur from "../../assets/img/AniEgatur.svg";
+import CintaEgaturDer from "../../assets/img/CintaEgaturDer.svg";
 
 import chef1 from "../../assets/img/ChefIco.jpg";
 
@@ -25,6 +26,13 @@ export function HomeBody() {
               className="h-full w-full object-cover opacity-50 animate-spin-slow"
             />
           </div>
+        </div>
+        <div className="absolute top-0 right-0 h-[100px] w-[100px] ">
+          <img
+            src={CintaEgaturDer}
+            alt=""
+            className="h-full w-full object-cover opacity-50"
+          />
         </div>
 
         {/* Contenido principal */}
@@ -49,32 +57,6 @@ export function HomeBody() {
           .animate-spin-slow {
             animation: spin 100s linear infinite;
           }
-          @keyframes slide {
-            0% {
-              background-position: 0% 0%;
-            }
-            25% {
-              background-position: 100% 0%;
-            }
-            50% {
-              background-position: 100% 100%;
-            }
-            75% {
-              background-position: 0% 100%;
-            }
-            100% {
-              background-position: 0% 0%;
-            }
-          }
-          
-          .animate-gradient {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(-45deg, #ed4046, #f9c4c6, #ed4046, #f9c4c6, #ed4046);
-            background-size: 800% 800%;
-            animation: slide 30s linear infinite;
-          }
-          
         `}</style>
       </div>
 
