@@ -27,7 +27,25 @@ export function HomeBody() {
             />
           </div>
         </div>
-        <div className="absolute top-0 right-0 h-[100px] w-[100px] ">
+
+        {/* Cintas laterales _ Derecha */}
+        <div className="absolute top-20 right-0 h-[100px] w-[100px] xl:w-[150px] hidden lg:block animate-float">
+          <img
+            src={CintaEgaturDer}
+            alt=""
+            className="h-full w-full object-cover opacity-50"
+          />
+        </div>
+
+        <div className="absolute top-1/2 right-0 h-[75px] w-[75px]  hidden xl:block animate-float">
+          <img
+            src={CintaEgaturDer}
+            alt=""
+            className="h-full w-full object-cover opacity-50"
+          />
+        </div>
+
+        <div className="absolute bottom-20 right-0 h-[100px] w-[100px] xl:w-[150px] hidden lg:block animate-float">
           <img
             src={CintaEgaturDer}
             alt=""
@@ -36,7 +54,7 @@ export function HomeBody() {
         </div>
 
         {/* Contenido principal */}
-        <section className="flex flex-col items-center justify-center  mx-4 relative z-10">
+        <section className="flex flex-col items-center justify-center  mx-4 relative z-10 ">
           <BodyMain />
           <div className="h-1/5 flex items-end">
             <Reloj />
@@ -56,6 +74,36 @@ export function HomeBody() {
 
           .animate-spin-slow {
             animation: spin 100s linear infinite;
+          }
+
+          @keyframes float {
+            0% {
+              transform: translateY(-5px);
+            }
+            50% {
+              transform: translateY(5px);
+            }
+            100% {
+              transform: translateY(-5px);
+            }
+          }
+
+          .animate-float {
+            animation: float 4s ease-in-out infinite;
+          }
+
+          @keyframes width-change {
+            0%,
+            100% {
+              width: 150px;
+            }
+            50% {
+              width: 100px;
+            }
+          }
+
+          .animate-width-change {
+            animation: width-change 4s ease-in-out infinite;
           }
         `}</style>
       </div>
