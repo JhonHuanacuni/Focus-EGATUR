@@ -9,10 +9,16 @@ export function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
+   /*    console.log(currentScrollPos)
       const isVisible = prevScrollPos > currentScrollPos;
 
       setPrevScrollPos(currentScrollPos);
-      setVisible(isVisible);
+      setVisible(isVisible); */
+      if (currentScrollPos == 0) {
+        header.style.backgroundColor = 'rgba(255, 255, 255, 0.8)'; // Cambia el color de fondo del encabezado a uno con opacidad
+      } else {
+        header.style.backgroundColor = 'transparent'; // Haz que el encabezado sea transparente cuando se encuentra en la parte superior
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -22,9 +28,9 @@ export function Header() {
 
   return (
     <header
-    className="z-20 flex place-content-between items-center px-4 py-4 fixed w-screen shadow-md"
+    className="z-20 flex place-content-between items-center px-4 py-4 fixed w-screen shadow-md "
       style={{
-        backgroundColor: "rgba(255, 255, 255, 0.5)",
+        
         backdropFilter: "blur(5px)",
         transition: "top 0.3s",
         top: visible ? "0" : "-100px", // Change the value as per your need

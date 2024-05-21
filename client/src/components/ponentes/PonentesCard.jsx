@@ -6,7 +6,7 @@ export function PonentesCard({ nombre, especialidad, imagen }) {
     <Link to="/conferencistas" className="bg-red-500 rounded-lg flex flex-col items-center justify-center transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-lg relative group">
       <div>
         <img
-          className="sm:max-w-52 max-w-40 h-auto rounded-full py-4 px-4"
+          className="sm:max-w-52 max-w-52 h-auto rounded-full py-4 px-4"
           src={imagen}
           alt={nombre}
         />

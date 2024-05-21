@@ -4,6 +4,7 @@ import { BodyMain } from "./BodyMain";
 import { PonentesCard } from "../ponentes/PonentesCard";
 import AniEgatur from "../../assets/img/AniEgatur.svg";
 import CintaEgaturDer from "../../assets/img/CintaEgaturDer.svg";
+import Cinta from "../../assets/img/Cinta.svg";
 
 import chef1 from "../../assets/img/ChefIco.jpg";
 
@@ -18,7 +19,7 @@ export function HomeBody() {
     <>
       <div className="relative z-0 inset-0 flex overflow-hidden h-screen justify-center">
         <div className="absolute z-0 inset-0 flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-red-600 via-red-400 to-pink-300 animate-gradient"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-red-600 via-red-400 to-red-600  animate-gradient"></div>
           <div className="absolute h-[1000px] w-[1000px] flex items-center justify-center">
             <img
               src={AniEgatur}
@@ -29,34 +30,38 @@ export function HomeBody() {
         </div>
 
         {/* Cintas laterales _ Derecha */}
-        <div className="absolute top-20 right-0 h-[100px] w-[100px] xl:w-[150px] hidden lg:block animate-float">
+        <div className=" hidden absolute top-[-100vh] right-0 h-screen  xl:block animate-float">
           <img
-            src={CintaEgaturDer}
+            src={Cinta}
+            alt=""
+            className="h-full w-full object-cover opacity-50"
+          />
+          <img
+            src={Cinta}
             alt=""
             className="h-full w-full object-cover opacity-50"
           />
         </div>
 
-        <div className="absolute top-1/2 right-0 h-[75px] w-[75px]  hidden xl:block animate-float">
-          <img
-            src={CintaEgaturDer}
-            alt=""
-            className="h-full w-full object-cover opacity-50"
-          />
-        </div>
+        {/* Cinta lateral _ Izq */}
 
-        <div className="absolute bottom-20 right-0 h-[100px] w-[100px] xl:w-[150px] hidden lg:block animate-float">
+        <div className=" hidden absolute top-[-100vh] left-0 h-screen  xl:block animate-asd">
           <img
-            src={CintaEgaturDer}
+            src={Cinta}
             alt=""
-            className="h-full w-full object-cover opacity-50"
+            className="h-full w-full object-cover opacity-50 rotate-180"
+          />
+          <img
+            src={Cinta}
+            alt=""
+            className="h-full w-full object-cover opacity-50 rotate-180"
           />
         </div>
 
         {/* Contenido principal */}
         <section className="flex flex-col items-center justify-center  mx-4 relative z-10 ">
           <BodyMain />
-          <div className="h-1/5 flex items-end">
+          <div className="h-1/5 flex sm:items-end items-center">
             <Reloj />
           </div>
         </section>
@@ -73,37 +78,35 @@ export function HomeBody() {
           }
 
           .animate-spin-slow {
-            animation: spin 100s linear infinite;
+            animation: spin 200s linear infinite;
           }
 
           @keyframes float {
             0% {
-              transform: translateY(-5px);
+              transform: translateY(0);
             }
-            50% {
-              transform: translateY(5px);
-            }
+
             100% {
-              transform: translateY(-5px);
+              transform: translateY(100%);
             }
           }
 
           .animate-float {
-            animation: float 4s ease-in-out infinite;
+            animation: float 30s linear infinite;
           }
 
-          @keyframes width-change {
-            0%,
+          @keyframes asd {
+            0% {
+              transform: translateY(100%);
+            }
+
             100% {
-              width: 150px;
-            }
-            50% {
-              width: 100px;
+              transform: translateY(0);
             }
           }
 
-          .animate-width-change {
-            animation: width-change 4s ease-in-out infinite;
+          .animate-asd {
+            animation: asd 30s linear infinite;
           }
         `}</style>
       </div>
@@ -120,6 +123,11 @@ export function HomeBody() {
             <PonentesCard
               nombre={nombreChef1}
               especialidad={especialidadChef1}
+              imagen={chef1}
+            />
+            <PonentesCard
+              nombre={nombreChef2}
+              especialidad={especialidadChef2}
               imagen={chef1}
             />
             <PonentesCard
