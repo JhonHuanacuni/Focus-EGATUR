@@ -9,17 +9,19 @@ import { PonenteCard2 } from "./PonenteCard2";
 
 export function PonentesBoardBAR() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 place-items-center mt-5 ">
-      <PonenteCard1
-        invertir={""}
-        recorrer={"left-[10px]"}
-        ponente={ponente_2}
-        nombre={"Jesús Joseph Flores Yance"}
-        puesto={"Administrador de base de datos"}
-        experiencia={
-          "Conocimientos en Spring Boot Java - Microservicios, Reporting Services (SSRS), Integration Services (SSIS), Power BI Report Server, Machine Learning y administración de base de datos."
-        }
-      />
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-14 place-items-center px-7 justify-center">
+      <div className="place-self-center">
+        <PonenteCard1
+          invertir={""}
+          recorrer={"left-[10px]"}
+          ponente={ponente_2}
+          nombre={"Jesús Joseph Flores Yance"}
+          puesto={"Administrador de base de datos"}
+          experiencia={
+            "Conocimientos en Spring Boot Java - Microservicios, Reporting Services (SSRS), Integration Services (SSIS), Power BI Report Server, Machine Learning y administración de base de datos."
+          }
+        />        
+      </div>
 
       <PonenteCard1
         invertir={""}
@@ -40,7 +42,7 @@ export function PonentesBoardBAR() {
         nombre={"Jesús Joseph Flores Yance"}
         puesto={"Administrador de base de datos"}
         experiencia={
-          "Conocimientos en Spring Boot Java - Microservicios, Reporting Services (SSRS), Integration Services (SSIS), Power BI Report Server, Machine Learning y administración de base de datos."
+          "asd en Spring Boot Java - Microservicios, Reporting Services (SSRS), Integration Services (SSIS), Power BI Report Server, Machine Learning y administración de base de datos."
         }
       />
 

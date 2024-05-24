@@ -8,7 +8,7 @@ import { PonenteCard1 } from "./PonenteCard1";
 
 export function PonentesBoardGAS() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-14 place-items-center mt-5 justify-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-14 place-items-center px-7 justify-center">
       <div className="place-self-center">
         <PonenteCard1
           invertir={""}
@@ -41,7 +41,7 @@ export function PonentesBoardGAS() {
         nombre={"Jesús Joseph Flores Yance"}
         puesto={"Administrador de base de datos"}
         experiencia={
-          "Conocimientos en Spring Boot Java - Microservicios, Reporting Services (SSRS), Integration Services (SSIS), Power BI Report Server, Machine Learning y administración de base de datos."
+          "asd en Spring Boot Java - Microservicios, Reporting Services (SSRS), Integration Services (SSIS), Power BI Report Server, Machine Learning y administración de base de datos."
         }
       />
 

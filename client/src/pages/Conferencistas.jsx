@@ -15,7 +15,7 @@ export function Conferencistas() {
         </p>
       </div>
 
-      <section className=" bg-red-300 w-full py-5">
+      <section className=" bg-red-300 w-full py-5 pb-14">
         <div className="flex flex-col  text-black text-center m-auto my-6">
           <h1 className="text-[30px] font-extrabold">GASTRONOMIA</h1>
         </div> 
@@ -24,7 +24,7 @@ export function Conferencistas() {
         </div>        
       </section>
 
-      <section className=" bg-yellow-600 w-full py-5">
+      <section className=" bg-yellow-600 w-full py-5 pb-14">
         <div className="flex flex-col  text-black text-center m-auto my-6">
           <h1 className="text-[30px] font-extrabold">BARISMO</h1>
         </div>
@@ -33,7 +33,7 @@ export function Conferencistas() {
         </div>        
       </section>
 
-      <section className=" bg-slate-400 w-full py-5">
+      <section className=" bg-slate-400 w-full py-5 pb-14">
         <div className="flex flex-col  text-black text-center m-auto my-6">
           <h1 className="text-[30px] font-extrabold">BAR Y MIXOLOGIA</h1>
         </div>
@@ -42,7 +42,7 @@ export function Conferencistas() {
         </div>        
       </section>
 
-      <section className=" bg-orange-400 w-full py-5">
+      <section className=" bg-orange-400 w-full py-5 pb-14">
         <div className="flex flex-col  text-black text-center m-auto my-6">
           <h1 className="text-[30px] font-extrabold">PASTELERIA</h1>
         </div>

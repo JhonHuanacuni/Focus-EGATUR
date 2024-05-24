@@ -1,24 +1,22 @@
 import React, { useState } from "react";
-import fondo_1 from "../assets/img/fondo_1.png";
+import { motion } from "framer-motion";
 
 export function PonenteCard1(data) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div
-      className={`h-full w-full aspect-video max-w-[550px] flex relative z-0 ${
-        hovered ? "scale-110 shadow-xl" : ""
-      }`}
+    <motion.div
+      className="h-full w-full aspect-video max-w-[550px] relative flex"
       style={{ boxShadow: "0 0 15px rgba(0, 0, 0, 1)" }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      initial={{ scale: 0.9, opacity: 0 }} // Estado inicial de la animación
+      animate={{ scale: hovered ? 1.1 : 1, opacity: 1 }} // Estado final de la animación
+      transition={{ duration: 0.5 }} // Duración de la animación
+      onMouseEnter={() => setHovered(true)} // Función para manejar el evento onMouseEnter
+      onMouseLeave={() => setHovered(false)} // Función para manejar el evento onMouseLeave
     >
-      <div
-        className="bg-red-500 h-full w-1/3 z-[1]"
-        style={{ boxShadow: "0 0 10px red" }}
-      />
-      <div className="bg-black h-full w-2/3 z-0 p-10">
-        <div className="flex flex-col w-full h-full justify-center">
+      <div className="bg-red-500 h-full w-1/3 z-[1]" style={{ boxShadow: "0 0 10px red" }} />
+      <div className="bg-black h-full w-2/3 z-0 p-10 flex items-center justify-center">
+        <div className="text-center">
           <h4 className="text-red-400 text-[18px] font-bold tracking-tight leading-none">
             {data.nombre}
           </h4>
@@ -31,9 +29,9 @@ export function PonenteCard1(data) {
         </div>
       </div>
       <div
-        className={`absolute ${
-          data.invertir ? "transform scale-x-[-1]" : ""
-        }  ${data.recorrer} inset-0 right-auto z-[1]`}
+        className={`absolute ${data.invertir ? "transform scale-x-[-1]" : ""} ${
+          data.recorrer
+        } inset-0 right-auto z-[1] ${hovered ? "hovered" : ""}`}
       >
         <img
           className="object-cover h-full"
@@ -41,17 +39,14 @@ export function PonenteCard1(data) {
           style={{ filter: "drop-shadow(0 0 15px red)" }}
         />
       </div>
-    </div>
+    </motion.div>
   );
 }
 
 <style jsx>{`
-  .scale-110 {
+  .hovered {
     transform: scale(1.1);
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .shadow-xl {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
 `}</style>
