@@ -9,7 +9,7 @@ import { PonenteCard2 } from "./PonenteCard2";
 
 export function PonentesBoardBAR() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 place-items-center mt-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 place-items-center mt-5 ">
       <PonenteCard1
         invertir={""}
         recorrer={"left-[10px]"}

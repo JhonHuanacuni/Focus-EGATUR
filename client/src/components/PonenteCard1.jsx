@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import fondo_1 from "../assets/img/fondo_1.png";
-import "../index.css"; // Asegúrate de importar el archivo CSS
 
 export function PonenteCard1(data) {
+  const [hovered, setHovered] = useState(false);
+
   return (
     <div
-      className="h-full w-full aspect-video max-w-[550px] flex relative z-0"
+      className={`h-full w-full aspect-video max-w-[550px] flex relative z-0 ${
+        hovered ? "scale-110 shadow-xl" : ""
+      }`}
       style={{ boxShadow: "0 0 15px rgba(0, 0, 0, 1)" }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
       <div
         className="bg-red-500 h-full w-1/3 z-[1]"
@@ -28,7 +33,7 @@ export function PonenteCard1(data) {
       <div
         className={`absolute ${
           data.invertir ? "transform scale-x-[-1]" : ""
-        }  ${data.recorrer} inset-0 right-auto z-[1] ${data.animacion} `}
+        }  ${data.recorrer} inset-0 right-auto z-[1]`}
       >
         <img
           className="object-cover h-full"
@@ -39,3 +44,14 @@ export function PonenteCard1(data) {
     </div>
   );
 }
+
+<style jsx>{`
+  .scale-110 {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .shadow-xl {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  }
+`}</style>
