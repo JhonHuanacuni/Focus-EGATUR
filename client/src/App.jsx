@@ -10,6 +10,7 @@ import { Toaster } from "react-hot-toast";
 import { useState, useEffect } from "react";
 import { RingLoader } from "react-spinners";
 import { Footer } from "./components/Footer";
+import { Cronograma } from "./pages/Cronograma";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -32,6 +33,7 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/conferencistas" element={<Conferencistas />} />
           <Route path="/nosotros" element={<Nosotros/>} />
+          <Route path="/cronograma" element={<Cronograma/>} />
           <Route path="/tasks" element={<TasksPage />} />
           <Route path="/tasks-create" element={<TaskFormPage />} />
           <Route path="/tasks/:id" element={<TaskFormPage />} />

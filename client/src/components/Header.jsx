@@ -5,19 +5,20 @@ import { NavBar } from "./NavBar";
 export function Header() {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
+  const [headerBg, setHeaderBg] = useState('transparent');
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-   /*    console.log(currentScrollPos)
       const isVisible = prevScrollPos > currentScrollPos;
 
       setPrevScrollPos(currentScrollPos);
-      setVisible(isVisible); */
-      if (currentScrollPos == 0) {
-        header.style.backgroundColor = 'rgba(255, 255, 255, 0.8)'; // Cambia el color de fondo del encabezado a uno con opacidad
+      setVisible(isVisible);
+
+      if (currentScrollPos === 0) {
+        setHeaderBg('rgba(255, 255, 255, 0.8)'); // Color de fondo con opacidad
       } else {
-        header.style.backgroundColor = 'transparent'; // Haz que el encabezado sea transparente cuando se encuentra en la parte superior
+        setHeaderBg('transparent'); // Transparente cuando se desplaza
       }
     };
 
@@ -28,13 +29,13 @@ export function Header() {
 
   return (
     <header
-    className="z-20 flex place-content-between items-center px-4 py-4 fixed w-screen shadow-md "
+      className="z-20 flex place-content-between items-center px-4 py-4 fixed w-screen shadow-md"
       style={{
-        
         backdropFilter: "blur(5px)",
-        transition: "top 0.3s",
-        top: visible ? "0" : "-100px", // Change the value as per your need
-        opacity: visible ? 1 : 0, // Toggle opacity based on visibility
+        transition: "top 0.3s, opacity 0.3s, background-color 0.3s",
+        top: visible ? "0" : "-100px",
+        opacity: visible ? 1 : 0,
+        backgroundColor: headerBg,
       }}
     >
       <img
@@ -44,17 +45,6 @@ export function Header() {
         style={{ opacity: 0.9 }}
       />
       <NavBar />
-      <style jsx>{`
-        header {
-          opacity: 1;
-        }
-        header.hidden {
-          opacity: 0;
-        }
-        header.transition {
-          transition: opacity 0.3s ease-in-out;
-        }
-      `}</style>
     </header>
   );
 }

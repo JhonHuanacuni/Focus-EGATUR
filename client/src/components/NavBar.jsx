@@ -19,17 +19,14 @@ export function NavBar() {
           </Link>
         </li>
         <li>
-        <Link
-            to="/nosotros"
-            className="hover:text-yellow-400 font-bold"
-          >
+          <Link to="/nosotros" className="hover:text-yellow-400 font-bold">
             Nosotros
           </Link>
         </li>
         <li>
-          <a href="#" className=" hover:text-yellow-400 font-bold">
+        <Link to="/cronograma" className="hover:text-yellow-400 font-bold">
             Cronograma
-          </a>
+          </Link>
         </li>
       </ul>
       <img
