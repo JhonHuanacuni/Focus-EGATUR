@@ -4,6 +4,7 @@ import { TaskFormPage } from "./pages/TaskFormPage";
 import { Navigation } from "./components/Navigation";
 import { HomePage } from "./pages/HomePage";
 import { Conferencistas } from "./pages/Conferencistas";
+import { Nosotros } from "./pages/Nosotros";
 import { Header } from "./components/Header";
 import { Toaster } from "react-hot-toast";
 import { useState, useEffect } from "react";
@@ -30,6 +31,7 @@ function App() {
           <Route path="/" element={<Navigate to="/tasks" />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/conferencistas" element={<Conferencistas />} />
+          <Route path="/nosotros" element={<Nosotros/>} />
           <Route path="/tasks" element={<TasksPage />} />
           <Route path="/tasks-create" element={<TaskFormPage />} />
           <Route path="/tasks/:id" element={<TaskFormPage />} />
