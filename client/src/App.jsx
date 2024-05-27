@@ -29,7 +29,7 @@ function App() {
       <div className="">   {/* px-4 pt-4 */}
         <Header />
         <Routes>
-          <Route path="/" element={<Navigate to="/tasks" />} />
+          <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/conferencistas" element={<Conferencistas />} />
           <Route path="/nosotros" element={<Nosotros/>} />

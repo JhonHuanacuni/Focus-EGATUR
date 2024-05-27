@@ -5,6 +5,10 @@ import { PonentesCard } from "../ponentes/PonentesCard";
 import AniEgatur from "../../assets/img/AniEgatur.svg";
 import CintaEgaturDer from "../../assets/img/CintaEgaturDer.svg";
 import Cinta from "../../assets/img/Cinta.svg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import sponsor from "../../assets/img/sponsor.jpg";
 
 import chef1 from "../../assets/img/ChefIco.jpg";
 
@@ -15,6 +19,35 @@ const nombreChef2 = " Chef Y";
 const especialidadChef2 = "Barismo";
 
 export function HomeBody() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <div className="relative z-0 inset-0 flex overflow-hidden h-screen justify-center">
@@ -154,6 +187,32 @@ export function HomeBody() {
             probar el diseño visual antes de insertar el texto final.
           </p>
         </div>
+      </section>
+      <section className="flex justify-center items-center flex-col mt-20 mb-10">
+        <h2 className="text-xl font-bold mb-5">Patrocinadores</h2>
+        <Slider {...settings} className="w-3/4">
+          <div>
+            <img
+              src={sponsor}
+              alt="Patrocinador 1"
+              className="mx-auto pr-5"
+            />
+          </div>
+          <div>
+            <img
+              src={sponsor}
+              alt="Patrocinador 2"
+              className="mx-auto pr-5"
+            />
+          </div>
+          <div>
+            <img
+              src={sponsor}
+              alt="Patrocinador 3"
+              className="mx-auto pr-5"
+            />
+          </div>
+        </Slider>
       </section>
     </>
   );

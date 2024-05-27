@@ -5,20 +5,21 @@ import { NavBar } from "./NavBar";
 export function Header() {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
-  const [headerBg, setHeaderBg] = useState('transparent');
+  const [headerBg, setHeaderBg] = useState('rgba(255, 255, 255, 0.8)'); // Blanco con opacidad inicialmente
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
       const isVisible = prevScrollPos > currentScrollPos;
+      const isAtBottom = (window.innerHeight + window.pageYOffset) >= document.body.offsetHeight;
 
       setPrevScrollPos(currentScrollPos);
       setVisible(isVisible);
 
-      if (currentScrollPos === 0) {
-        setHeaderBg('rgba(255, 255, 255, 0.8)'); // Color de fondo con opacidad
+      if (isAtBottom || currentScrollPos === 0) {
+        setHeaderBg('transparent'); // Transparente al estar en la parte superior o al fondo
       } else {
-        setHeaderBg('transparent'); // Transparente cuando se desplaza
+        setHeaderBg(isVisible ? 'rgba(255, 255, 255, 0.8)' : 'transparent'); // Blanco mientras sube, transparente mientras baja
       }
     };
 
