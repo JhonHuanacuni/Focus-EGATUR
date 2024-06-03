@@ -1,5 +1,6 @@
 import React from "react";
 import { Reloj } from "./Reloj";
+import { FormPersonas } from "./FormPersonas";
 import { BodyMain } from "./BodyMain";
 import { PonentesCard } from "../ponentes/PonentesCard";
 import AniEgatur from "../../assets/img/AniEgatur.svg";
@@ -19,6 +20,7 @@ const nombreChef2 = " Chef Y";
 const especialidadChef2 = "Barismo";
 
 export function HomeBody() {
+  
   const settings = {
     dots: true,
     infinite: true,
@@ -187,6 +189,9 @@ export function HomeBody() {
             probar el diseño visual antes de insertar el texto final.
           </p>
         </div>
+      </section>
+      <section>
+          <FormPersonas/>
       </section>
       <section className="flex justify-center items-center flex-col mt-20 mb-10">
         <h2 className="text-xl font-bold mb-5">Patrocinadores</h2>
