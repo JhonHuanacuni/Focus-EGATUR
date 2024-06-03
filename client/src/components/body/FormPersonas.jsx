@@ -39,7 +39,7 @@ export const FormPersonas = () => {
 
   return (
     <section className="flex justify-center items-center flex-col mt-20 mb-10">
-      <h2 className="text-3xl font-bold mb-6" style={{ color: '#E50914' }}>Registro para el Congreso</h2>
+      <h2 className="text-3xl font-bold mb-6" style={{ color: '#E50914' }}>Inscribete para ser parte del congreso!</h2>
       <form onSubmit={handleSubmit} className={`w-full max-w-lg bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ${submitted ? 'animate-shake' : ''}`}>
         <div className="mb-4">
           <label className="block text-black text-sm font-bold mb-2" htmlFor="nombre">
@@ -135,7 +135,19 @@ export const FormPersonas = () => {
           </button>
         </div>
       </form>
+      <style jsx>{`
+        @keyframes shake {
+          0% { transform: translateX(0); }
+          25% { transform: translateX(5px); }
+          50% { transform: translateX(-5px); }
+          75% { transform: translateX(5px); }
+          100% { transform: translateX(0); }
+        }
+
+        .animate-shake {
+          animation: shake 0.5s ease-in-out;
+        }
+      `}</style>
     </section>
   );
 };
-
