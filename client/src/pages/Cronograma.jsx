@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Tab = ({ title, active, onClick }) => (
   <div
     className={`cursor-pointer p-5 font-bold ${
-      active ? "border-b-2 border-gray-400" : "border-b-2 border-transparent"
+      active ? "border-b-2 border-red-400" : "border-b-2 border-transparent"
     }`}
     onClick={onClick}
   >
@@ -19,7 +19,7 @@ export const Cronograma = () => {
   const [activeTab, setActiveTab] = useState(1);
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-gray-100">
+    <div className="h-screen flex flex-col justify-center items-center bg-red-100">
       <div className="text-black text-center mb-10">
         <h1 className="text-[30px] font-extrabold">CRONOGRAMA</h1>
       </div>
