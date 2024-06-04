@@ -1,6 +1,8 @@
-import ponente_1 from "../assets/img/ponente_1.png";
-/* import ponente_2 from "../assets/img/ponente_2.png";
-import chef_1 from "../assets/img/chef_real_1.png";
+import chef_1 from "../assets/img/chef_real_3.png";
+
+/* import ponente_1 from "../assets/img/ponente_1.png";
+import ponente_2 from "../assets/img/ponente_2.png";
+
 import chef_2 from "../assets/img/chef_real_2.png";
 import chef_3 from "../assets/img/chef_real_3.png"; */
 
@@ -77,7 +79,7 @@ export const PonentesBoardGAS = () => {
     <div className="relative w-full flex justify-center items-center mt-10">
       <button
         onClick={handlePrev}
-        className="absolute left-0 bg-gray-200 p-2 rounded-full z-20"
+        className="absolute -bottom-10 lg:bottom-auto ms:p-0 left-40 lg:left-20 bg-gray-200 p-5 rounded-full z-20"
       >
         &#9664;
       </button>
@@ -94,13 +96,13 @@ export const PonentesBoardGAS = () => {
           {duplicateSlides.map((ponente, index) => (
             <div
               key={index}
-              className="w-full flex-shrink-0 px-4 box-border flex justify-center"
+              className="w-full flex-shrink-0 px-4 box-border flex justify-center py-10"
               style={{ flex: "0 0 100%" }}
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
             >
               <PonenteCard1
-                ponente={ponente}
+                ponente={chef_1}
                 nombre={ponente.nombre}
                 puesto={ponente.puesto}
                 experiencia={ponente.experiencia}
@@ -111,7 +113,7 @@ export const PonentesBoardGAS = () => {
       </div>
       <button
         onClick={handleNext}
-        className="absolute right-0 bg-gray-200 p-2 rounded-full z-20"
+        className="absolute right-40 -bottom-10 lg:bottom-auto lg:right-20 bg-gray-200 p-5 rounded-full z-20"
       >
         &#9654;
       </button>

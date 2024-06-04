@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 import sponsor from "../../assets/img/sponsor.jpg";
 
 import chef1 from "../../assets/img/ChefIco.jpg";
+import { motion } from "framer-motion";
 
 const nombreChef1 = " Chef X";
 const especialidadChef1 = "Gastronomia";
@@ -20,7 +21,6 @@ const nombreChef2 = " Chef Y";
 const especialidadChef2 = "Barismo";
 
 export function HomeBody() {
-  
   const settings = {
     dots: true,
     infinite: true,
@@ -148,7 +148,22 @@ export function HomeBody() {
 
       <section className=" flex justify-center items-center flex-col">
         <div className="flex py-5 text-black">
-          <p className=" font-bold text-xl">Ponentes</p>
+          <div className="relative inline-block">
+            <p className="font-bold text-4xl text-[#F7A40C]">
+              CONOCE A NUESTROS PONENTES
+            </p>
+            <motion.div
+              className="absolute left-0 right-0 bottom-0 h-1 bg-[#F7A40C]"
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+              transition={{
+                duration: 2,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+            />
+          </div>
         </div>
         <div
           className="flex justify-center flex-col w-3/4 overflow-x-auto"
@@ -190,32 +205,22 @@ export function HomeBody() {
           </p>
         </div>
       </section>
+      <hr></hr>
       <section>
-          <FormPersonas/>
+        <FormPersonas />
       </section>
+      <hr></hr>
       <section className="flex justify-center items-center flex-col mt-20 mb-10">
         <h2 className="text-xl font-bold mb-5">Patrocinadores</h2>
         <Slider {...settings} className="w-3/4">
           <div>
-            <img
-              src={sponsor}
-              alt="Patrocinador 1"
-              className="mx-auto pr-5"
-            />
+            <img src={sponsor} alt="Patrocinador 1" className="mx-auto pr-5" />
           </div>
           <div>
-            <img
-              src={sponsor}
-              alt="Patrocinador 2"
-              className="mx-auto pr-5"
-            />
+            <img src={sponsor} alt="Patrocinador 2" className="mx-auto pr-5" />
           </div>
           <div>
-            <img
-              src={sponsor}
-              alt="Patrocinador 3"
-              className="mx-auto pr-5"
-            />
+            <img src={sponsor} alt="Patrocinador 3" className="mx-auto pr-5" />
           </div>
         </Slider>
       </section>

@@ -2,15 +2,17 @@ import { Link } from "react-router-dom";
 import { SocialIcon } from "./SocialIcon";
 import { Copyright } from "./Copyright";
 
+/* import chef_1 from "../assets/img/chef_real_3.png"; */
+import  logoEgaturFooter  from "../assets/img/logoEgaturFooter.png";
 const fondo = "bg-black";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-10">
+    <footer className="bg-gray-900 text-white py-10">
       <div className="container mx-auto flex flex-wrap justify-between">
         <div className="w-full md:w-1/3 text-center mb-6 md:mb-0">
           <img
-            src="https://egatur.edu.pe/wp-content/uploads/2021/08/logo11.png"
+            src={logoEgaturFooter}
             alt="Logo"
             className="mx-auto"
             width="260"

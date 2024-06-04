@@ -38,9 +38,9 @@ export const FormPersonas = () => {
   };
 
   return (
-    <section className="flex justify-center items-center flex-col mt-20 mb-10">
-      <h2 className="text-3xl font-bold mb-6" style={{ color: '#E50914' }}>Inscribete para ser parte del congreso!</h2>
-      <form onSubmit={handleSubmit} className={`w-full max-w-lg bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ${submitted ? 'animate-shake' : ''}`}>
+    <section className=" flex justify-center items-center flex-col mt-20 mb-10">
+      <h2 className="text-3xl font-bold mb-6" style={{ color: '#F7A40C' }}>Forma parte del congreso!</h2>
+      <form onSubmit={handleSubmit} className={`w-full sm:max-w-lg max-w-sm bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ${submitted ? 'animate-shake' : ''}`}>
         <div className="mb-4">
           <label className="block text-black text-sm font-bold mb-2" htmlFor="nombre">
             Nombre
