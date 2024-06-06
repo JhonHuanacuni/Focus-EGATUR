@@ -8,8 +8,14 @@ module.exports = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'egatur': ['Permanent Marker'],
+        'egatur2': ['La Belle Aurore']
+      }
+    },
   },
   darkMode: "class",
   plugins: [nextui()],
 };
+

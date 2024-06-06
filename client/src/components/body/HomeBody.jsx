@@ -149,7 +149,7 @@ export function HomeBody() {
       <section className=" flex justify-center items-center flex-col">
         <div className="flex py-5 text-black">
           <div className="relative inline-block">
-            <p className="font-bold text-4xl text-[#F7A40C]">
+            <p className=" text-center font-bold text-4xl text-[#F7A40C]">
               CONOCE A NUESTROS PONENTES
             </p>
             <motion.div
