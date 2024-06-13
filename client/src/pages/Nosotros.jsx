@@ -9,7 +9,7 @@ export function Nosotros() {
 
   return (
     <div className="h-screen flex flex-col">
-      <div className="flex flex-col text-black text-center m-auto pt-20 pb-10">
+      <div className="flex flex-col text-black text-center m-auto pt-36">
         <h1 className="text-[30px] font-extrabold">NOSOTROS</h1>
       </div>
       <div className="flex-grow sm:flex">
